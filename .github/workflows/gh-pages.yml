@@ -1,22 +1,24 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (peaceiris)
+
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write   # allow pushing commit / tag
+  pages: write      # allow pages write
+  id-token: write   # optional, useful if you need OIDC
+
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node (not required, but keeps environment predictable)
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: "18"
+          persist-credentials: true   # important: lets action use GITHUB_TOKEN for pushing
 
-      - name: Deploy to Pages (push contents of repo root)
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
