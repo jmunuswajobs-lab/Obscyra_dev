@@ -1,11 +1,15 @@
-# Obscyra v4 — Full PWA Bundle
+# Obscyra Core v1
 
-Preview locally:
-```
-python3 -m http.server 8000
-# open http://localhost:8000
-```
+Rock-solid foundation for the Obscyra Art Bible.
 
-Deploy to GitHub Pages:
-1. Create repo and push files to root.
-2. Enable Pages in repo settings (branch: main, folder: /).
+## Features
+- Mobile + desktop safe
+- Slide-out drawer (closed by default)
+- No frameworks
+- GitHub Pages compatible
+- Deterministic behavior
+
+## Deploy
+Push files to `main` branch and enable GitHub Pages (root).
+
+This is the base layer. Everything else builds on top.
