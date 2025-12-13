@@ -1,6 +1,73 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Obscyra</title>
-<link rel=manifest href=manifest.json><link rel=stylesheet href=assets/css/styles.css></head>
-<body><div class=topbar><button id=menu class=btn>☰</button><strong>Obscyra — Modes</strong></div>
-<div id=drawer class=drawer><div class=panel><p>Menu</p></div></div>
-<main class=container><input class=search placeholder='Search'><div id=grid class=grid></div></main>
-<script src=assets/js/main.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Obscyra — Core v1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <button id="menuToggle" aria-label="Open menu">☰</button>
+    <h1>Obscyra</h1>
+  </header>
+
+  <!-- SLIDE-OUT DRAWER -->
+  <nav id="drawer" class="drawer" aria-hidden="true">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#modes">Modes</a></li>
+      <li><a href="#houses">Houses</a></li>
+      <li><a href="#sigils">Sigils</a></li>
+      <li><a href="#prompts">Prompts</a></li>
+    </ul>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="content">
+    <section id="home">
+      <h2>Obscyra Core v1</h2>
+      <p>
+        This is the stable foundation.  
+        Nothing here hides. Nothing here breaks.
+      </p>
+    </section>
+
+    <section id="modes">
+      <h3>Modes</h3>
+      <ul>
+        <li>Crimson Mirage</li>
+        <li>Astral Obscura</li>
+        <li>Neon Obscura</li>
+      </ul>
+    </section>
+
+    <section id="houses">
+      <h3>Houses</h3>
+      <ul>
+        <li>Crimson</li>
+        <li>Astral</li>
+        <li>Neon</li>
+      </ul>
+    </section>
+
+    <section id="sigils">
+      <h3>Sigils</h3>
+      <p>Placeholder — SVGs come later.</p>
+    </section>
+
+    <section id="prompts">
+      <h3>Prompts</h3>
+      <p>Placeholder — prompt system attaches here.</p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
