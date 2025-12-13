@@ -1,0 +1,115 @@
+:root {
+  --bg: #0b0b0d;
+  --panel: #141418;
+  --text: #e6e6eb;
+  --accent: #7f5cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* TOP BAR */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.topbar h1 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.topbar button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* DRAWER */
+.drawer {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 56px);
+  background: var(--panel);
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  z-index: 1100;
+  padding: 16px;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer li {
+  margin-bottom: 12px;
+}
+
+.drawer a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.drawer a:hover {
+  color: var(--accent);
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 1050;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 72px 16px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
