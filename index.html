@@ -1,73 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Obscyra — Core v1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
+<html><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width'/>
+<title>Obscyra</title><link rel='stylesheet' href='assets/css/style.css'></head>
 <body>
-
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <button id="menuToggle" aria-label="Open menu">☰</button>
-    <h1>Obscyra</h1>
-  </header>
-
-  <!-- SLIDE-OUT DRAWER -->
-  <nav id="drawer" class="drawer" aria-hidden="true">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#modes">Modes</a></li>
-      <li><a href="#houses">Houses</a></li>
-      <li><a href="#sigils">Sigils</a></li>
-      <li><a href="#prompts">Prompts</a></li>
-    </ul>
-  </nav>
-
-  <!-- OVERLAY -->
-  <div id="overlay" class="overlay"></div>
-
-  <!-- MAIN CONTENT -->
-  <main id="content">
-    <section id="home">
-      <h2>Obscyra Core v1</h2>
-      <p>
-        This is the stable foundation.  
-        Nothing here hides. Nothing here breaks.
-      </p>
-    </section>
-
-    <section id="modes">
-      <h3>Modes</h3>
-      <ul>
-        <li>Crimson Mirage</li>
-        <li>Astral Obscura</li>
-        <li>Neon Obscura</li>
-      </ul>
-    </section>
-
-    <section id="houses">
-      <h3>Houses</h3>
-      <ul>
-        <li>Crimson</li>
-        <li>Astral</li>
-        <li>Neon</li>
-      </ul>
-    </section>
-
-    <section id="sigils">
-      <h3>Sigils</h3>
-      <p>Placeholder — SVGs come later.</p>
-    </section>
-
-    <section id="prompts">
-      <h3>Prompts</h3>
-      <p>Placeholder — prompt system attaches here.</p>
-    </section>
-  </main>
-
-  <script src="main.js"></script>
-</body>
-</html>
+<header><h1>Obscyra Art Bible</h1>
+<nav>
+<a href='#brand'>Brand</a><a href='#modes'>Modes</a>
+<a href='#houses'>Houses</a><a href='#prompts'>Prompts</a><a href='#sigils'>Sigils</a>
+</nav></header>
+<main>
+<section id='brand'><h2>Brand</h2><pre id='brandContent'></pre></section>
+<section id='modes'><h2>Modes</h2><pre id='modesContent'></pre></section>
+<section id='houses'><h2>Houses</h2><pre id='housesContent'></pre></section>
+<section id='prompts'><h2>Prompts</h2><pre id='promptsContent'></pre></section>
+<section id='sigils'><h2>Sigils</h2><pre id='sigilsContent'></pre></section>
+</main>
+<script src='assets/js/app.js'></script>
+</body></html>
