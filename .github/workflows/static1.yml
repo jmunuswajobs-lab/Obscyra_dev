@@ -1,0 +1,30 @@
+name: Deploy Obscyra to GitHub Pages
+on:
+  push:
+    branches: [ gh-pages ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .
+
+  publish:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish GitHub Pages
+        uses: actions/deploy-pages@v4
